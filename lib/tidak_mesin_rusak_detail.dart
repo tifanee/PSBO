@@ -53,7 +53,8 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Cangkul',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Container(
                         child: Row(
@@ -68,25 +69,43 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('ID'), Text('0103')],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Jenis Alat'), Text('xxxxx')],
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Merk'), Text('Crocodile')],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Harga'), Text('30.000')],
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Dimensi'), Text('300')],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Berat'), Text('2 Kg')],
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
