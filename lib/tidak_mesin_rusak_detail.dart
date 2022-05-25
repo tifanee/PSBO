@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI/home.dart';
 
 class TidakMesinRusakDetailScreen extends StatelessWidget {
   const TidakMesinRusakDetailScreen({Key? key}) : super(key: key);
@@ -23,13 +24,19 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
             top: 45,
             left: 20,
             right: 20,
-            child: Row(
-              children: [
-                Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                )
-              ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (_) => const Home()));
+              },
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
           Positioned(
@@ -57,8 +64,31 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Container(
-                        child: Row(
-                            children: [Icon(Icons.edit), Icon(Icons.delete)]),
+                        padding: EdgeInsets.only(left: 250.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const Home()));
+                          },
+                          child: Row(
+                            children: [Icon(Icons.edit)],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const Home()));
+                          },
+                          child: Row(
+                            children: [Icon(Icons.delete)],
+                          ),
+                        ),
                       ),
                     ],
                   ),
