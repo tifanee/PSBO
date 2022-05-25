@@ -25,11 +25,11 @@ class Welcome extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      "img/T-Farmer.png",
+                      "images/T-Farmer.png",
                       width: 230,
                     ),
                     Image.asset(
-                      "img/rafiki.png",
+                      "images/rafiki.png",
                       width: 350,
                       height: 320,
                     ),
