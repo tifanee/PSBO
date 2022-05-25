@@ -54,7 +54,6 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                       Text(
                         'Cangkul',
                         style: TextStyle(fontWeight: FontWeight.bold),
-                        textDirection: TextDirection.ltr,
                       ),
                       Container(
                         child: Row(
@@ -88,14 +87,6 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [Text('Berat'), Text('2 Kg')],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Sumberdaya'), Text('300')],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Kapasitas'), Text('300')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
