@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './button.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -65,6 +66,8 @@ class _FormScreenState extends State<FormScreen> {
                   hintText: 'Deskripsi Kerusakan (maks. 200 kata', maxLines: 5),
               _TextFieldWidget(hintText: 'Tempat Perbaikan'),
               _TextFieldWidget(hintText: 'Estimasi waktu perbaikan (hari)'),
+              Button(
+                  title: 'Simpan', onTap: () {}) //blm solve tulisannya gakeluar
             ]),
           )
         ],
