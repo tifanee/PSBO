@@ -62,6 +62,10 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 <img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
 
+### Menghapus Alat
+
+<img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
