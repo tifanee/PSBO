@@ -48,6 +48,15 @@
 
 T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertanian. T-Farmer sangat berguna bagi petani untuk mencatat peralatan pertanian mereka sekaligus memantau kondisi peralatan tersebut. Petani dapat menambah dan menghapus alat, petani juga dapat mengubah detail maupun kondisi alat mereka dengan mudah.
 
+## Use Case Diagram
+
+<img src="https://drive.google.com/file/d/1OxzPFlh2Rod0lFHjI200WXNgUzKLZz4o/view?usp=sharing">
+
+## Activity Diagram
+
+### Menambah Alat
+
+<img src="https://drive.google.com/file/d/1UJX2MizoeLoZkleNq7sJgr8ixBF7tIYJ/view?usp=sharing">
 
 ## Getting Started
 
