@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+//import 'package:hexcolor/hexcolor.dart';
 import './pages/home_page.dart';
 import './pages/mesin_baik.dart';
 import './pages/sec_home_page.dart';

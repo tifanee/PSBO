@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+//import 'package:hexcolor/hexcolor.dart';
 import '../pages/mesin_baik.dart';
 
 class card_tools extends StatelessWidget {
@@ -27,7 +27,7 @@ class card_tools extends StatelessWidget {
           Container(
             height: 80,
             width: 80,
-            color: HexColor("#ECECEC"),
+            color: Color.fromARGB(255, 236, 236, 236), //HexColor("#ECECEC"),
             margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
           ),
           Container(
@@ -60,9 +60,11 @@ class card_tools extends StatelessWidget {
                   child: Text("Tampilkan Detail",
                       textAlign: TextAlign.right,
                       style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 10,
-                          color: HexColor("#407BFF"))),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 10,
+                        color: Color.fromARGB(
+                            255, 64, 123, 255), //HexColor("#407BFF")
+                      )),
                   onTap: () {
                     Navigator.push(
                         context,

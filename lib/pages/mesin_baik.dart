@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+//import 'package:hexcolor/hexcolor.dart';
 import '../widgets/details_container.dart';
 
 class MesinBaik extends StatefulWidget {
@@ -36,7 +36,7 @@ class _MesinBaikState extends State<MesinBaik> {
           height: MediaQuery.of(context).size.height / 4 * 2.6,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-              color: HexColor("#FEFEFE"),
+              color: Color.fromARGB(255, 254, 254, 254), //HexColor("#FEFEFE"),
               borderRadius: BorderRadius.circular(40)),
           padding: EdgeInsets.fromLTRB(20, 28, 20, 0),
           child: ListView(
