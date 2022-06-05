@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+//import 'package:hexcolor/hexcolor.dart';
 
 class details_container extends StatelessWidget {
   const details_container({

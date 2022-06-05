@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+// import 'package:hexcolor/hexcolor.dart';
 import '../widgets/card_tools.dart';
 import '../pages/mesin_baik.dart';
 
@@ -17,7 +17,8 @@ class _SecHomePageState extends State<SecHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: HexColor("#FAFAFA"),
+        backgroundColor:
+            Color.fromARGB(255, 250, 250, 250), //HexColor("#FAFAFA"),
         appBar: BarApp("Manajemen Peralatan Tani"),
         floatingActionButton: buildNavigateButton(),
         body: Container(
@@ -38,7 +39,7 @@ class _SecHomePageState extends State<SecHomePage> {
 
   AppBar BarApp(title) {
     return AppBar(
-      backgroundColor: HexColor("#407BFF"),
+      backgroundColor: Color.fromARGB(255, 64, 123, 255), //HexColor("#407BFF"),
       title: Text(title),
       actions: <Widget>[IconButton(onPressed: () {}, icon: Icon(Icons.search))],
     );
