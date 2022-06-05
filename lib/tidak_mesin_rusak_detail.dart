@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI/home.dart';
+import './home.dart';
 
 class TidakMesinRusakDetailScreen extends StatelessWidget {
   const TidakMesinRusakDetailScreen({Key? key}) : super(key: key);
