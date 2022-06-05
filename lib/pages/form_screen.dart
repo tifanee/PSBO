@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './button.dart';
+import '../widgets/button.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);

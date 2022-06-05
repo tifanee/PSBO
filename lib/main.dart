@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './mesin_rusak_detail_screen.dart';
+import 'pages/mesin_rusak_detail_screen.dart';
 
 // void main() {
 //   runApp(const MyApp());
