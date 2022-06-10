@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import '../data/dummy_data.dart';
+import '../models/mesin.dart';
+import '../enums.dart';
 
 class MesinRusakDetailScreen extends StatelessWidget {
-  const MesinRusakDetailScreen({Key? key}) : super(key: key);
+  const MesinRusakDetailScreen({super.key, required this.data});
+
+  final Mesin data;
 
   @override
   Widget build(BuildContext context) {
+    final perbaikan = listPerbaikan.firstWhere(
+      (perbaikan) => perbaikan.idAlat == data.id,
+    );
     return Scaffold(
       body: Stack(
         children: [
@@ -53,7 +61,7 @@ class MesinRusakDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Nama Alat',
+                        data.nama,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Container(
@@ -67,35 +75,42 @@ class MesinRusakDetailScreen extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('ID'), Text('1234')],
+                    children: [Text('ID'), Text(data.id)],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Jenis Alat'), Text('1234')],
+                    children: data.jenis == Jenis.mesin
+                        ? [Text('Jenis Alat'), Text('Bermesin')]
+                        : [Text('Jenis Alat'), Text('Tidak Bermesin')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Merk'), Text('1234')],
+                    children: [Text('Merk'), Text(data.merk)],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Harga'), Text('1234')],
+                    children: [Text('Harga'), Text('${data.harga}')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Dimensi'), Text('1234')],
+                    children: [Text('Dimensi'), Text('${data.dimensi}')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Berat'), Text('1234')],
+                    children: [Text('Berat'), Text('${data.berat}')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Sumberdaya'), Text('1234')],
+                    children: [
+                      Text('Sumberdaya'),
+                      data.sumberDaya == SumberDaya.bensin
+                          ? Text('Bensin')
+                          : Text('Listrik')
+                    ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Kapasitas'), Text('1234')],
+                    children: [Text('Kapasitas'), Text('${data.kapasitas}')],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -108,8 +123,7 @@ class MesinRusakDetailScreen extends StatelessWidget {
                     'Deskripsi Kerusakan',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                      '............................................................'),
+                  Text(perbaikan.deskripsi),
                   SizedBox(
                     height: 20,
                   ),
@@ -120,7 +134,9 @@ class MesinRusakDetailScreen extends StatelessWidget {
                         'Rencana',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text('Diperbaiki')
+                      perbaikan.rencana == Rencana.diperbaiki
+                          ? Text('Diperbaiki')
+                          : Text('Diganti')
                     ],
                   ),
                 ],

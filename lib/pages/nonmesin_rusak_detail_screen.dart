@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import '../pages/home_page.dart';
+import '../enums.dart';
+import '../models/nonmesin.dart';
+import '../data/dummy_data.dart';
 
-class TidakMesinRusakDetailScreen extends StatelessWidget {
-  const TidakMesinRusakDetailScreen({Key? key}) : super(key: key);
-
+class NonMesinRusakDetailScreen extends StatelessWidget {
+  const NonMesinRusakDetailScreen({super.key, required this.data});
+  final NonMesin data;
   @override
   Widget build(BuildContext context) {
+    final perbaikan = listPerbaikan.firstWhere(
+      (perbaikan) => perbaikan.idAlat == data.id,
+    );
     return Scaffold(
       body: Stack(
         children: [
@@ -17,7 +23,8 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
               height: 350,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      fit: BoxFit.cover, image: AssetImage('img/cangkul.png'))),
+                      fit: BoxFit.cover,
+                      image: AssetImage('images/cangkul.png'))),
             ),
           ),
           Positioned(
@@ -26,8 +33,8 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
             right: 20,
             child: GestureDetector(
               onTap: () {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => const Home()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (_) => const HomePage()));
               },
               child: Row(
                 children: [
@@ -59,36 +66,13 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Cangkul',
+                        data.nama,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 250.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => const Home()));
-                          },
-                          child: Row(
-                            children: [Icon(Icons.edit)],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => const Home()));
-                          },
-                          child: Row(
-                            children: [Icon(Icons.delete)],
-                          ),
-                        ),
+                        child: Row(
+                            children: [Icon(Icons.edit), Icon(Icons.delete)]),
                       ),
                     ],
                   ),
@@ -97,42 +81,44 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('ID'), Text('0103')],
+                    children: [Text('ID'), Text(data.id)],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Jenis Alat'), Text('xxxxx')],
+                    children: data.jenis == Jenis.mesin
+                        ? [Text('Jenis Alat'), Text('Bermesin')]
+                        : [Text('Jenis Alat'), Text('Tidak Bermesin')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Merk'), Text('Crocodile')],
+                    children: [Text('Merk'), Text(data.merk)],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Harga'), Text('30.000')],
+                    children: [Text('Harga'), Text('${data.harga}')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Dimensi'), Text('300')],
+                    children: [Text('Dimensi'), Text('${data.dimensi}')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Berat'), Text('2 Kg')],
+                    children: [Text('Berat'), Text('${data.berat}')],
                   ),
                   SizedBox(
                     height: 10,
@@ -160,7 +146,9 @@ class TidakMesinRusakDetailScreen extends StatelessWidget {
                         'Rencana',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text('Diperbaiki')
+                      perbaikan.rencana == Rencana.diperbaiki
+                          ? Text('Diperbaiki')
+                          : Text('Diganti')
                     ],
                   ),
                 ],

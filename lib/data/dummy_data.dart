@@ -1,6 +1,5 @@
-import 'package:psbo/models/nonmesin.dart';
-
 import '../enums.dart';
+import '../models/nonmesin.dart';
 import '../models/mesin.dart';
 import '../models/perbaikan.dart';
 

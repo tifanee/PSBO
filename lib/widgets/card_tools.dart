@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import '../pages/mesin_rusak_detail_screen.dart';
+import '../pages/nonmesin_baik_detail_screen.dart';
+import '../pages/nonmesin_rusak_detail_screen.dart';
 //import 'package:hexcolor/hexcolor.dart';
 import '../pages/mesin_baik.dart';
+import '../enums.dart';
 
 class card_tools extends StatelessWidget {
   const card_tools(
@@ -67,11 +71,16 @@ class card_tools extends StatelessWidget {
                       )),
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MesinBaik(
-                                  data: data,
-                                )));
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => data.jenis == Jenis.mesin
+                              ? (data.kondisi == Kondisi.baik
+                                  ? MesinBaik(data: data)
+                                  : MesinRusakDetailScreen(data: data))
+                              : (data.kondisi == Kondisi.baik
+                                  ? NonMesinBaikDetailScreen(data: data)
+                                  : NonMesinRusakDetailScreen(data: data))),
+                    );
                   },
                 ),
               ],

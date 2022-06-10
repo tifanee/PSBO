@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import '../enums.dart';
+import '../models/nonmesin.dart';
 
 class NonMesinBaikDetailScreen extends StatelessWidget {
-  const NonMesinBaikDetailScreen({Key? key}) : super(key: key);
+  const NonMesinBaikDetailScreen({super.key, required this.data});
+  final NonMesin data;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +56,7 @@ class NonMesinBaikDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Nama Alat',
+                        data.nama,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
@@ -68,42 +71,44 @@ class NonMesinBaikDetailScreen extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('ID'), Text('1234')],
+                    children: [Text('ID'), Text(data.id)],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Jenis Alat'), Text('1234')],
+                    children: data.jenis == Jenis.mesin
+                        ? [Text('Jenis Alat'), Text('Bermesin')]
+                        : [Text('Jenis Alat'), Text('Tidak Bermesin')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Merk'), Text('1234')],
+                    children: [Text('Merk'), Text(data.merk)],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Harga'), Text('1234')],
+                    children: [Text('Harga'), Text('${data.harga}')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Dimensi'), Text('1234')],
+                    children: [Text('Dimensi'), Text('${data.dimensi}')],
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('Berat'), Text('1234')],
+                    children: [Text('Berat'), Text('${data.berat}')],
                   ),
                   SizedBox(
                     height: 10,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:hexcolor/hexcolor.dart';
 import '../widgets/details_container.dart';
+import '../enums.dart';
 
 class MesinBaik extends StatefulWidget {
   final data;
@@ -93,7 +94,9 @@ class _MesinBaikState extends State<MesinBaik> {
               details_container(
                   context: context,
                   judul: "Jenis Alat",
-                  value: "${data.jenisAlat}"),
+                  value: data.jenis == Jenis.mesin
+                      ? "Bermesin"
+                      : "Tidak Bermesin"),
               details_container(
                   context: context, judul: "Merk", value: "${data.merk}"),
               details_container(
@@ -109,17 +112,11 @@ class _MesinBaikState extends State<MesinBaik> {
               details_container(
                   context: context,
                   judul: "Kapasitas",
-                  value: "${data.kapasitas}"),
-              details_container(
-                  context: context, judul: "Kondisi", value: "${data.kondisi}"),
+                  value: "${data.kapasitas} watt/cc"),
               details_container(
                   context: context,
-                  judul: "Deskripsi Kerusakan",
-                  value: "----"),
-              details_container(
-                  context: context,
-                  judul: "Deskripsi Kerusakan",
-                  value: "----"),
+                  judul: "Kondisi",
+                  value: data.kondisi == Kondisi.baik ? "Baik" : "Rusak"),
             ],
           ),
         )
