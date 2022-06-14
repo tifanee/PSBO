@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:psbo_home_dan_mesinbaik/pages/mesin_baik.dart';
+import 'package:psbo_home_dan_mesinbaik/models/tools_model.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/mesin_baik_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/mesin_rusak_detail_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/mesin_rusak_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/nonmesin_baik_detail_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/nonmesin_baik_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/nonmesin_rusak_screen.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/tidak_mesin_rusak_detail.dart';
 
 class card_tools extends StatelessWidget {
-  const card_tools(
-      {Key? key,
-      required this.context,
-      required this.toolsName,
-      required this.toolsCondition,
-      required this.data})
-      : super(key: key);
-
+  final ToolsModel tool;
   final BuildContext context;
-  final toolsName;
-  final toolsCondition;
-  final data;
+  const card_tools({Key? key, required this.context, required this.tool})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +41,13 @@ class card_tools extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        toolsName,
+                        "${tool.nama}",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 14),
                       ),
                       Text(
-                        toolsCondition,
+                        "${tool.kondisi}",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 10),
@@ -64,12 +63,42 @@ class card_tools extends StatelessWidget {
                           fontSize: 10,
                           color: HexColor("#407BFF"))),
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MesinBaik(
-                                  data: data,
-                                )));
+                    if (tool.kondisi == "Baik" && tool.jenisAlat == "Mesin") {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MesinBaik(
+                                    context: context,
+                                    data: tool,
+                                  )));
+                    } else if (tool.kondisi == "Rusak" &&
+                        tool.jenisAlat == "Mesin") {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MesinRusak(
+                                    context: context,
+                                    data: tool,
+                                  )));
+                    } else if (tool.kondisi == "Baik" &&
+                        (tool.jenisAlat).toString() == "Tidak Mesin") {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NonMesinBaik(
+                                    context: context,
+                                    data: tool,
+                                  )));
+                    } else if (tool.kondisi == "Rusak" &&
+                        (tool.jenisAlat).toString() == "Tidak Mesin") {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NonMesinRusak(
+                                    context: context,
+                                    data: tool,
+                                  )));
+                    }
                   },
                 ),
               ],

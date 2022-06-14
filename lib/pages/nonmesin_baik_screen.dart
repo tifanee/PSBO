@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:provider/provider.dart';
+import 'package:psbo_home_dan_mesinbaik/blocs/tools/tools_bloc.dart';
+import 'package:psbo_home_dan_mesinbaik/models/tools_model.dart';
 import 'package:psbo_home_dan_mesinbaik/widgets/details_container.dart';
 
-class MesinBaik extends StatefulWidget {
-  final data;
-  const MesinBaik({Key? key, required this.data}) : super(key: key);
+class NonMesinBaik extends StatefulWidget {
+  final ToolsModel data;
+  final BuildContext context;
+  const NonMesinBaik({Key? key, required this.context, required this.data})
+      : super(key: key);
 
   @override
-  State<MesinBaik> createState() => _MesinBaikState(data: this.data);
+  State<NonMesinBaik> createState() =>
+      _NonMesinBaikState(context: context, data: this.data);
 }
 
-class _MesinBaikState extends State<MesinBaik> {
-  _MesinBaikState({this.data});
-  var data;
+class _NonMesinBaikState extends State<NonMesinBaik> {
+  _NonMesinBaikState({required this.context, required this.data});
+  BuildContext context;
+  ToolsModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +27,19 @@ class _MesinBaikState extends State<MesinBaik> {
         body: Stack(
       children: <Widget>[
         Container(
-          height: MediaQuery.of(context).size.height / 4 * 3,
-          color: Colors.red,
+          height: 350,
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/cangkul.png'))),
         ),
-        details_body(context)
+        details_body(context, data)
       ],
     ));
   }
 
-  Column details_body(BuildContext context) {
+  Column details_body(BuildContext context, ToolsModel tool) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -63,7 +74,12 @@ class _MesinBaikState extends State<MesinBaik> {
                           Icons.delete_outline_outlined,
                           size: 36,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<ToolsBloc>().add(
+                                DeleteTool(tool: data),
+                              );
+                          Navigator.pop(context);
+                        },
                       ),
                     ],
                   )
@@ -112,10 +128,6 @@ class _MesinBaikState extends State<MesinBaik> {
                   value: "${data.kapasitas}"),
               details_container(
                   context: context, judul: "Kondisi", value: "${data.kondisi}"),
-              details_container(
-                  context: context,
-                  judul: "Deskripsi Kerusakan",
-                  value: "----"),
               details_container(
                   context: context,
                   judul: "Deskripsi Kerusakan",
