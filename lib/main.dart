@@ -3,6 +3,7 @@ import 'package:psbo_home_dan_mesinbaik/blocs/tools/tools_bloc.dart';
 import 'package:psbo_home_dan_mesinbaik/pages/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:psbo_home_dan_mesinbaik/models/tools_model.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -87,6 +88,6 @@ class _MyAppState extends State<MyApp> {
                     estimasiWaktu: "12 hari"),
               ]),
             ))
-    ], child: MaterialApp(home: HomePage()));
+    ], child: MaterialApp(home: Welcome()));
   }
 }

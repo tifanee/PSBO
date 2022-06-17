@@ -56,9 +56,9 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 flutter_icons:
-  android: "trash_icon"
+  android: "launcher_icon"
   ios: true
-  image_path: "assets/trash.svg"
+  image_path: "assets/icon/icon.png"
 # The following section is specific to Flutter.
 flutter:
 
@@ -78,6 +78,7 @@ flutter:
     - assets/images/note.png
     - assets/images/traktor.png
     - assets/images/rafiki.png
+    - assets/images/T-Farmer.png
 
   #  - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
