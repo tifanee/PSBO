@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/card_tools.dart';
 //import 'package:hexcolor/hexcolor.dart';
 import '../data/dummy_data.dart';
+import './form_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -82,6 +83,9 @@ class _HomePageState extends State<HomePage> {
 
   Widget buildNavigateButton() => FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => FormScreen()));
+        },
       );
 }

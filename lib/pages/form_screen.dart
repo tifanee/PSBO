@@ -9,13 +9,15 @@ class FormScreen extends StatefulWidget {
 }
 
 //text field widget
-Widget _TextFieldWidget({String? hintText, int? maxLines}) {
+Widget _TextFieldWidget(
+    {String? hintText, int? maxLines, TextEditingController? controller}) {
   return Container(
     padding: EdgeInsets.only(bottom: 8.0),
     child: Material(
       elevation: 3,
       borderRadius: BorderRadius.circular(5.0),
-      child: TextField(
+      child: TextFormField(
+        controller: controller,
         maxLines: maxLines,
         style: TextStyle(
           color: Color.fromARGB(255, 127, 127, 127),
@@ -40,6 +42,23 @@ Widget _TextFieldWidget({String? hintText, int? maxLines}) {
 class _FormScreenState extends State<FormScreen> {
   @override
   Widget build(BuildContext context) {
+    TextEditingController controllerId = TextEditingController();
+    TextEditingController controllerNama = TextEditingController();
+    TextEditingController controllerJenisAlat = TextEditingController();
+    TextEditingController controllerMerk = TextEditingController();
+    TextEditingController controllerHarga = TextEditingController();
+    TextEditingController controllerPanjang = TextEditingController();
+    TextEditingController controllerLebar = TextEditingController();
+    TextEditingController controllerBerat = TextEditingController();
+    TextEditingController controllerSumberdaya = TextEditingController();
+    TextEditingController controllerKapasitas = TextEditingController();
+    TextEditingController controllerKondisi = TextEditingController();
+    TextEditingController controllerDeskripsi = TextEditingController();
+    // TextEditingController controllerRencana = TextEditingController();
+    TextEditingController controllerTempat = TextEditingController();
+    TextEditingController controllerEstimasi = TextEditingController();
+
+    print(controllerNama.value.text);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60.0),
@@ -55,13 +74,18 @@ class _FormScreenState extends State<FormScreen> {
             padding: EdgeInsets.all(20.0),
             color: Color.fromARGB(255, 250, 250, 250),
             child: Column(children: [
-              _TextFieldWidget(hintText: 'Nama Alat'),
+              _TextFieldWidget(
+                  hintText: 'Nama Alat', controller: controllerNama),
+              _TextFieldWidget(hintText: 'ID'),
+              _TextFieldWidget(hintText: 'Jenis Alat'),
               _TextFieldWidget(hintText: 'Merk'),
               _TextFieldWidget(hintText: 'Harga (Rp)'),
               _TextFieldWidget(hintText: 'Panjang (cm)'),
               _TextFieldWidget(hintText: 'Lebar (cm)'),
               _TextFieldWidget(hintText: 'Berat (kg)'),
+              _TextFieldWidget(hintText: 'Sumberdaya'),
               _TextFieldWidget(hintText: 'Kapasitas mesin (watt/cc)'),
+              _TextFieldWidget(hintText: 'Kondisi'),
               _TextFieldWidget(
                   hintText: 'Deskripsi Kerusakan (maks. 200 kata', maxLines: 5),
               _TextFieldWidget(hintText: 'Tempat Perbaikan'),
