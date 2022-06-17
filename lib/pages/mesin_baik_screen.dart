@@ -75,22 +75,10 @@ class _MesinBaikState extends State<MesinBaik> {
                           size: 36,
                         ),
                         onPressed: () {
-                          AlertDialog(
-                            title: Text(
-                                "Apakah anda yakin untuk menghapus alat ini?"),
-                            actions: <Widget>[
-                              TextButton(
-                                child: Text("YA"),
-                                onPressed: () {
-                                  context
-                                      .read<ToolsBloc>()
-                                      .add(DeleteTool(tool: data));
-                                  Navigator.pop(context);
-                                },
-                              ),
-                              TextButton(child: Text("BATAL"), onPressed: () {})
-                            ],
-                          );
+                          context.read<ToolsBloc>().add(
+                                DeleteTool(tool: data),
+                              );
+                          Navigator.pop(context);
                         },
                       ),
                     ],
