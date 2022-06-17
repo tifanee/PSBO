@@ -7,7 +7,7 @@ abstract class ToolsState extends Equatable {
   List<Object> get props => [];
 }
 
-class ToolsLoading extends ToolsState {}
+// class ToolsLoading extends ToolsState {}
 
 class ToolsLoaded extends ToolsState {
   final List<ToolsModel> tools;

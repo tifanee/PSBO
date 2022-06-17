@@ -6,7 +6,7 @@ part 'tools_event.dart';
 part 'tools_state.dart';
 
 class ToolsBloc extends Bloc<ToolsEvent, ToolsState> {
-  ToolsBloc() : super(ToolsLoading()) {
+  ToolsBloc() : super(ToolsLoaded(tools: [])) {
     on<LoadTools>(_onLoadTools);
     on<AddTool>(_onAddTools);
     on<DeleteTool>(_onDeleteTools);

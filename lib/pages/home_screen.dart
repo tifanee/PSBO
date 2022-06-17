@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
       appBar: BarApp("Manajemen Peralatan Tani"),
       floatingActionButton: buildNavigateButton(),
       body: BlocBuilder<ToolsBloc, ToolsState>(builder: (context, state) {
-        if (state is ToolsLoading) {
-          return const CircularProgressIndicator();
-        }
+        // if (state is ToolsLoading) {
+        //   return const CircularProgressIndicator();
+        // }
         if (state is ToolsLoaded) {
           return Container(
               child: ListView.builder(
