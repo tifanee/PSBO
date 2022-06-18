@@ -48,11 +48,62 @@
 
 T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertanian. T-Farmer sangat berguna bagi petani untuk mencatat peralatan pertanian mereka sekaligus memantau kondisi peralatan tersebut. Petani dapat menambah dan menghapus alat, petani juga dapat mengubah detail maupun kondisi alat mereka dengan mudah.
 
+## Problem Description 
+
+Indonesia merupakan negara agraris yang sudah sejak dahulu menjadikan sektor pertanian sebagai penopang perekonomian negara. Sampai saat ini pun sektor pertanian masih tetap menyumbang devisa yang cukup besar bagi perekonomian negara. Namun, dengan sumber daya yang melimpah, proses perkembangan dan modernisasi sektor pertanian Indonesia berjalan sangat lambat. Salah satu indikatornya yaitu produktivitas pertanian yang cenderung menurun akibat penerapan teknologi di sektor pertanian yang kurang memadai.
+
+Teknologi dalam pertanian adalah segala sesuatu yang dapat memudahkan pekerjaan dan menghasilkan output yang lebih baik. Teknologi pertanian sendiri bisa berupa peralatan berbentuk mesin maupun non-mesin. Namun dalam proses menuju hasil output yang lebih baik, sangat dibutuhkan sistem untuk monitoring kondisi peralatan tersebut yang berguna bagi petani untuk mencatat peralatan pertanian, sekaligus memantau kondisi peralatan tersebut.
+
+## Kapabilitas Sistem
+
+- Menyimpan informasi kondisi peralatan
+- Mencatat peralatan pertanian 
+- Memantau alokasi peralatan dengan kondisi yang baik, maupun rusak
+
+## Manfaat Sistem
+
+- Menjaga informasi dengan tepat tentang deskripsi pada peralatan, sehingga memudahkan petani untuk mengetahui kondisi setiap peralatan
+- Meningkatkan pemantauan kondisi peralatan
+- Mempercepat petani mengetahui kondisi setiap alat
+
 ## Tech Stack
 
 - Frame Work  : Flutter 2.17.0
 - Text Editor : VS Code
 - Emulator    : Android Studio Emulator
+
+## Actor
+Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
+
+## User Stories
+<table>
+  <thead>
+      <th>No</th>
+      <th>Actor</th>
+      <th>User Stories</th>
+      <th>Acceptance Criteria</th>
+  </thead>
+   <tbody>
+    <tr>
+      <td>1</td>
+      <td>Petani</td>
+      <td>Sebagai seorang petani saya ingin mencatat/menambah peralatan pertanian untuk mempunyai daftar peralatan pertanian yang saya miliki</td>
+      <td> - Petani berada di halaman utama aplikasi
+           - Ketika petani memilih menambah alat untuk mencatat peralatannya kemudian ditampilkan form untuk mengisi detail alat yang akan ditambahkan
+           - Alat berhasil ditambahkan sehingga petani dapat mempunyai daftar peralatan yang ia miliki
+      </td>
+     </tr>
+      <tr>
+      <td>2</td>
+      <td>Petani</td>
+      <td>Sebagai seorang petani saya ingin menghapus alat pertanian yang ada pada daftar peralatan pertanian saya untuk memperbarui daftar peralatan pertanian  yang saya miliki </td>
+      <td> - Petani berada di halaman detail alat
+           - Ketika petani memilih simbol ‘tempat sampah’  untuk menghapus alat tersebut kemudian petani memilih ya
+           - Alat berhasil dihapus sehingga petani dapat memperbarui daftar peralatan pertaniannya
+      </td>
+     </tr>
+   </tbody>
+</table>
 
 ## Use Case Diagram
 
@@ -78,6 +129,7 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 ## Prototipe
 
+![Design and Prototype](https://user-images.githubusercontent.com/66372277/174418548-a24b8490-cb6d-43f1-a67b-e14287569eea.png)
 
 ## Getting Started
 
