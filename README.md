@@ -88,18 +88,20 @@ Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
       <td>1</td>
       <td>Petani</td>
       <td>Sebagai seorang petani saya ingin mencatat/menambah peralatan pertanian untuk mempunyai daftar peralatan pertanian yang saya miliki</td>
-      <td> - Petani berada di halaman utama aplikasi
-        <p> - Ketika petani memilih menambah alat untuk mencatat peralatannya kemudian ditampilkan form untuk mengisi detail alat yang akan ditambahkan </p>
-        <p> - Alat berhasil ditambahkan sehingga petani dapat mempunyai daftar peralatan yang ia miliki </p>
+      <td> <ul> <li> Petani berada di halaman utama aplikasi </li>
+                <li> Ketika petani memilih menambah alat untuk mencatat peralatannya kemudian ditampilkan form untuk mengisi detail alat yang akan ditambahkan </li>
+                <li> Alat berhasil ditambahkan sehingga petani dapat mempunyai daftar peralatan yang ia miliki </li>
+           </ul>
       </td>
      </tr>
       <tr>
       <td>2</td>
       <td>Petani</td>
       <td>Sebagai seorang petani saya ingin menghapus alat pertanian yang ada pada daftar peralatan pertanian saya untuk memperbarui daftar peralatan pertanian  yang saya miliki </td>
-      <td> - Petani berada di halaman detail alat
-           - Ketika petani memilih simbol ‘tempat sampah’  untuk menghapus alat tersebut kemudian petani memilih ya
-           - Alat berhasil dihapus sehingga petani dapat memperbarui daftar peralatan pertaniannya
+        <td> <ul> <li> Petani berada di halaman detail alat </li>
+                  <li> Ketika petani memilih simbol ‘tempat sampah’  untuk menghapus alat tersebut kemudian petani memilih ya </li>
+                  <li> Alat berhasil dihapus sehingga petani dapat memperbarui daftar peralatan pertaniannya </li>
+             </ul>
       </td>
      </tr>
    </tbody>
