@@ -129,6 +129,10 @@ Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
 
 ![sequence diagram psbo](https://user-images.githubusercontent.com/66372277/174416332-14db8573-2786-439c-a5a6-c2f1eb5c33d8.jpeg)
 
+## Domain Model Class Diagram
+
+![model domain class diagram](https://user-images.githubusercontent.com/66372277/174419171-4ceabf4e-8485-4117-b359-1be082661196.jpeg)
+
 ## Prototipe
 
 ![Design and Prototype](https://user-images.githubusercontent.com/66372277/174418548-a24b8490-cb6d-43f1-a67b-e14287569eea.png)
