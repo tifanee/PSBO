@@ -151,12 +151,11 @@ Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
 
 ## Ucapan Terima Kasih
 
-Puji syukur kami panjatkan kepada Allah SWT atas rahmat-Nya yang telah membuat kelompok kami dapat menyelesaikan pembuatan aplikasi mobile apps bernama T-Farmer dari mata kuliah Pengembangan Sistem Berorientasi Objek (KOM334). Ucapan terima kasih juga kami sampaikan kepada semua pihak yang memberi kami kesempatan dan selalu membantu kami dalam pembuatan aplikasi HelloPet, diantaranya:
+Puji syukur kami panjatkan kepada Allah SWT atas rahmat-Nya yang telah membuat kelompok kami dapat menyelesaikan pembuatan aplikasi mobile apps bernama T-Farmer dari mata kuliah Pengembangan Sistem Berorientasi Objek (KOM334). Ucapan terima kasih juga kami sampaikan kepada semua pihak yang memberi kami kesempatan dan selalu membantu kami dalam pembuatan aplikasi T-Farmer, diantaranya:
 <br>
 - Bapak/Ibu Dosen Ilmu Komputer IPB University
 - Kakak Asisten Praktikum Pengembangan Sistem Berorientasi Objek
 </br>
-
 Selama pembuatan aplikasi ini, kami mendapatkan banyak pengalaman dan ilmu yang dapat membangun kami menjadi lebih baik di masa yang akan datang. Mohon maaf atas segala kekurangan dari kelompok kami. Semoga laporan yang kelompok kami buat bermanfaat bagi semua pihak.
 
 > *Sincerely, kelompok 4-P1.*
