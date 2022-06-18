@@ -48,6 +48,12 @@
 
 T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertanian. T-Farmer sangat berguna bagi petani untuk mencatat peralatan pertanian mereka sekaligus memantau kondisi peralatan tersebut. Petani dapat menambah dan menghapus alat, petani juga dapat mengubah detail maupun kondisi alat mereka dengan mudah.
 
+## Tech Stack
+
+- Frame Work  : Flutter 2.17.0
+- Text Editor : VS Code
+- Emulator    : Android Studio Emulator
+
 ## Use Case Diagram
 
 ![Use Case Modul Alat Pertanian](https://user-images.githubusercontent.com/66372277/174416224-2afa4378-7045-483a-8085-56bc9628587e.jpg)
@@ -72,11 +78,6 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 ## Prototipe
 
-## Tech Stack
-
-- Frame Work  : Flutter 2.17.0
-- Text Editor : VS Code
-- Emulator    : Android Studio Emulator
 
 ## Getting Started
 
