@@ -1,5 +1,7 @@
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import '../pages/home_page.dart';
+import 'package:psbo_home_dan_mesinbaik/pages/home_screen.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -23,11 +25,11 @@ class Welcome extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      "images/T-Farmer.png",
+                      "assets/images/T-Farmer.png",
                       width: 230,
                     ),
                     Image.asset(
-                      "images/rafiki.png",
+                      "assets/images/rafiki.png",
                       width: 350,
                       height: 320,
                     ),
@@ -50,11 +52,8 @@ class Welcome extends StatelessWidget {
                     padding: const EdgeInsets.all(40.0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => const HomePage(),
-                            ));
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (_) => HomePage()));
                       },
                       child: Container(
                         height: 50,

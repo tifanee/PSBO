@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-//import 'package:hexcolor/hexcolor.dart';
-import '../widgets/details_container.dart';
-import '../enums.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:provider/provider.dart';
+import 'package:psbo_home_dan_mesinbaik/blocs/tools/tools_bloc.dart';
+import 'package:psbo_home_dan_mesinbaik/models/tools_model.dart';
+import 'package:psbo_home_dan_mesinbaik/widgets/details_container.dart';
 
 class MesinBaik extends StatefulWidget {
-  final data;
-  const MesinBaik({Key? key, required this.data}) : super(key: key);
+  final ToolsModel data;
+  final BuildContext context;
+  const MesinBaik({Key? key, required this.context, required this.data})
+      : super(key: key);
 
   @override
-  State<MesinBaik> createState() => _MesinBaikState(data: this.data);
+  State<MesinBaik> createState() =>
+      _MesinBaikState(context: context, data: this.data);
 }
 
 class _MesinBaikState extends State<MesinBaik> {
-  _MesinBaikState({this.data});
-  var data;
+  _MesinBaikState({required this.context, required this.data});
+  BuildContext context;
+  ToolsModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +27,19 @@ class _MesinBaikState extends State<MesinBaik> {
         body: Stack(
       children: <Widget>[
         Container(
-          height: MediaQuery.of(context).size.height / 4 * 3,
-          color: Colors.red,
+          height: 350,
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/traktor.png'))),
         ),
-        details_body(context)
+        details_body(context, data)
       ],
     ));
   }
 
-  Column details_body(BuildContext context) {
+  Column details_body(BuildContext context, ToolsModel tool) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -37,7 +47,7 @@ class _MesinBaikState extends State<MesinBaik> {
           height: MediaQuery.of(context).size.height / 4 * 2.6,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-              color: Color.fromARGB(255, 254, 254, 254), //HexColor("#FEFEFE"),
+              color: HexColor("#FEFEFE"),
               borderRadius: BorderRadius.circular(40)),
           padding: EdgeInsets.fromLTRB(20, 28, 20, 0),
           child: ListView(
@@ -64,7 +74,12 @@ class _MesinBaikState extends State<MesinBaik> {
                           Icons.delete_outline_outlined,
                           size: 36,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<ToolsBloc>().add(
+                                DeleteTool(tool: data),
+                              );
+                          Navigator.pop(context);
+                        },
                       ),
                     ],
                   )
@@ -94,9 +109,7 @@ class _MesinBaikState extends State<MesinBaik> {
               details_container(
                   context: context,
                   judul: "Jenis Alat",
-                  value: data.jenis == Jenis.mesin
-                      ? "Bermesin"
-                      : "Tidak Bermesin"),
+                  value: "${data.jenisAlat}"),
               details_container(
                   context: context, judul: "Merk", value: "${data.merk}"),
               details_container(
@@ -112,11 +125,13 @@ class _MesinBaikState extends State<MesinBaik> {
               details_container(
                   context: context,
                   judul: "Kapasitas",
-                  value: "${data.kapasitas} watt/cc"),
+                  value: "${data.kapasitas}"),
+              details_container(
+                  context: context, judul: "Kondisi", value: "${data.kondisi}"),
               details_container(
                   context: context,
-                  judul: "Kondisi",
-                  value: data.kondisi == Kondisi.baik ? "Baik" : "Rusak"),
+                  judul: "Deskripsi Kerusakan",
+                  value: "----"),
             ],
           ),
         )

@@ -50,21 +50,33 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 ## Use Case Diagram
 
-<img src="https://drive.google.com/file/d/1OxzPFlh2Rod0lFHjI200WXNgUzKLZz4o/view?usp=sharing">
+![Use Case Modul Alat Pertanian](https://user-images.githubusercontent.com/66372277/174416224-2afa4378-7045-483a-8085-56bc9628587e.jpg)
 
 ## Activity Diagram
 
 ### Menambah Alat
 
-<img src="https://drive.google.com/file/d/1UJX2MizoeLoZkleNq7sJgr8ixBF7tIYJ/view?usp=sharing">
-
-### Mengubah Detail/Kondisi Alat
-
-<img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
+![Acitivity Diagram Tambah Alat](https://user-images.githubusercontent.com/66372277/174416289-97d19184-9861-4655-8903-0e7067e419ae.jpg)
 
 ### Menghapus Alat
 
-<img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
+![Activity Diagram Menghapus Alat](https://user-images.githubusercontent.com/66372277/174416295-5ecba4a4-2670-483b-883c-15840b9a375e.jpg)
+
+## Class Diagram
+
+![class diagram psbo](https://user-images.githubusercontent.com/66372277/174416326-15d5490b-d7c5-423c-8660-bbbad3e9df7a.jpeg)
+
+## Sequence Diagram
+
+![sequence diagram psbo](https://user-images.githubusercontent.com/66372277/174416332-14db8573-2786-439c-a5a6-c2f1eb5c33d8.jpeg)
+
+## Prototipe
+
+## Tech Stack
+
+- Frame Work  : Flutter 2.17.0
+- Text Editor : VS Code
+- Emulator    : Android Studio Emulator
 
 ## Getting Started
 

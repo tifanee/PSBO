@@ -1,6 +1,6 @@
 {
-    "name": "psbo",
-    "short_name": "psbo",
+    "name": "psbo_home_dan_mesinbaik",
+    "short_name": "psbo_home_dan_mesinbaik",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
