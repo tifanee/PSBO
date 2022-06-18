@@ -137,6 +137,12 @@ Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
 
 ![Design and Prototype](https://user-images.githubusercontent.com/66372277/174418548-a24b8490-cb6d-43f1-a67b-e14287569eea.png)
 
+## Hasil Testing 
+
+![testing1](https://user-images.githubusercontent.com/66372277/174419500-f3f9160e-c2c6-45b7-a319-dbdf9170dfbf.png)
+
+![testing2](https://user-images.githubusercontent.com/66372277/174419496-4c941b08-5d54-4c8d-bb99-c88ca80e7236.png)
+
 ## Saran Pengembangan Selanjutnya
 <ul>
   <li>Gambar alat dapat ditambahkan </li>
@@ -150,6 +156,7 @@ Puji syukur kami panjatkan kepada Allah SWT atas rahmat-Nya yang telah membuat k
 - Bapak/Ibu Dosen Ilmu Komputer IPB University
 - Kakak Asisten Praktikum Pengembangan Sistem Berorientasi Objek
 </br>
+
 Selama pembuatan aplikasi ini, kami mendapatkan banyak pengalaman dan ilmu yang dapat membangun kami menjadi lebih baik di masa yang akan datang. Mohon maaf atas segala kekurangan dari kelompok kami. Semoga laporan yang kelompok kami buat bermanfaat bagi semua pihak.
 
 > *Sincerely, kelompok 4-P1.*
