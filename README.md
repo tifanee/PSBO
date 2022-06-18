@@ -50,7 +50,7 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 ## Use Case Diagram
 
-<img src="https://drive.google.com/file/d/1OxzPFlh2Rod0lFHjI200WXNgUzKLZz4o/view?usp=sharing](https://user-images.githubusercontent.com/66372277/174416224-2afa4378-7045-483a-8085-56bc9628587e.jpg">
+![Use Case Modul Alat Pertanian](https://user-images.githubusercontent.com/66372277/174416224-2afa4378-7045-483a-8085-56bc9628587e.jpg)
 
 ## Activity Diagram
 
