@@ -1,1 +1,0 @@
-enum Condition { Baik, Rusak }
