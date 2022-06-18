@@ -58,13 +58,22 @@ T-Farmer merupakan aplikasi berbasis mobile sebagai modul untuk peralatan pertan
 
 <img src="https://drive.google.com/file/d/1UJX2MizoeLoZkleNq7sJgr8ixBF7tIYJ/view?usp=sharing">
 
-### Mengubah Detail/Kondisi Alat
-
-<img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
 
 ### Menghapus Alat
 
 <img src="https://drive.google.com/file/d/1kk3yNsrGLclMkI_cFG1VbOJ8WTXwvvh3/view?usp=sharing">
+
+## Class Diagram
+
+## Sequence Diagram
+
+## Prototipe
+
+## Tech Stack
+
+- Frame Work  : Flutter 2.17.0
+- Text Editor : VS Code
+- Emulator    : Android Studio Emulator
 
 ## Getting Started
 
