@@ -89,8 +89,8 @@ Seorang petani yang ingin mencatat peralatan pertanian serta kondisinya
       <td>Petani</td>
       <td>Sebagai seorang petani saya ingin mencatat/menambah peralatan pertanian untuk mempunyai daftar peralatan pertanian yang saya miliki</td>
       <td> - Petani berada di halaman utama aplikasi
-           - Ketika petani memilih menambah alat untuk mencatat peralatannya kemudian ditampilkan form untuk mengisi detail alat yang akan ditambahkan
-           - Alat berhasil ditambahkan sehingga petani dapat mempunyai daftar peralatan yang ia miliki
+        <p> - Ketika petani memilih menambah alat untuk mencatat peralatannya kemudian ditampilkan form untuk mengisi detail alat yang akan ditambahkan </p>
+        <p> - Alat berhasil ditambahkan sehingga petani dapat mempunyai daftar peralatan yang ia miliki </p>
       </td>
      </tr>
       <tr>
